@@ -1,6 +1,12 @@
-function Circle() {
+type Circle = {
+  className?: string;
+};
+
+function Circle({ className }: Circle) {
   return (
-    <div className="w-full relative overflow-y-visible overflow-x-clip">
+    <div
+      className={`w-full relative overflow-y-visible overflow-x-clip ${className}`}
+    >
       <div className="absolute bottom-0 w-full  h-[180%] overflow-hidden">
         <div className="absolute -left-32 top-0 h-[180%] blur aspect-square rounded-full bg-gradient-circle"></div>
       </div>

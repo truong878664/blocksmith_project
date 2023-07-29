@@ -12,7 +12,7 @@ function ItemRoadMaps() {
         <div className="">
           <span className="text-4xl font-bold">Join our Community</span>
           <div className="mt-2">
-            <button className="bg-black text-white px-6 py-4 rounded-full">
+            <button className="bg-black text-white px-6 py-4 rounded-full border-2 border-black hover:bg-white hover:text-black ">
               <span className="text-xl font-bold mr-4">Discord</span>
               <span className="-rotate-45 inline-block">
                 <i className="fa-solid fa-arrow-right"></i>

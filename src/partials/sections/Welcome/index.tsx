@@ -1,5 +1,5 @@
 import video from "../../../assets/video/crystal.mp4";
-import Circle from "./circle";
+import Circle from "../../../components/circleGradient";
 
 function ContentWelcome() {
   return (

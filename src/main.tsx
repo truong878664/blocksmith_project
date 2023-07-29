@@ -5,6 +5,7 @@ import About from "./sections/About";
 import Product from "./sections/Product";
 import Team from "./sections/Team";
 import RoadMap from "./sections/RoadMap";
+import Footer from "./sections/Footer";
 
 const root = document.getElementById("root");
 ReactDOM.createRoot(root!).render(
@@ -18,5 +19,6 @@ ReactDOM.createRoot(root!).render(
     </section>
     <Team />
     <RoadMap/>
+    <Footer/>
   </React.StrictMode>
 );
