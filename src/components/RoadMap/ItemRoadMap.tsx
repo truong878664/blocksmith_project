@@ -4,7 +4,7 @@ type ItemRoadMap = {
   id: number | string;
 };
 
-function ItemRoadMap({ img = "", title = "", id }: ItemRoadMap) {
+function ItemRoadMap({ img = "", title = "", id }: ItemRoadMap) { 
   return (
     <div className="aspect-square text-white relative overflow-hidden">
       <input

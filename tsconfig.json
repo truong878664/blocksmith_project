@@ -16,7 +16,6 @@
     "isolatedModules": true,
     "noEmit": true,
     "allowSyntheticDefaultImports": true,
-    // "jsx": "react",
     "jsx": "react-jsx",
     /* Linting */
     "strict": true,

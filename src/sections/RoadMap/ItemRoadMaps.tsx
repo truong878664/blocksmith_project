@@ -3,9 +3,9 @@ import dataRoadMaps from "../../data/dataRoadMap";
 
 function ItemRoadMaps() {
   return (
-    <div className="grid grid-cols-1 gap-4 pt-4">
+    <div className="grid grid-cols-1 gap-4 pt-4 md:grid-cols-2">
       {dataRoadMaps.map((item, index) => (
-        <ItemRoadMap img={item.img} title={item.title} id={index} />
+        <ItemRoadMap key={index} img={item.img} title={item.title} id={index} />
       ))}
       <div className="aspect-square border border-black px-8 pb-5">
         <img src="src/assets/img/roadMap/Discord.jpg" alt="" />

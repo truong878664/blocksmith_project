@@ -10,8 +10,10 @@ export default {
         "lilita-one": ["Lilita One", "cursive"],
       },
       backgroundImage: {
-        "gradient-circle":
+        "gradient-circle-pink":
           "radial-gradient(circle, rgba(243,39,94,.8) 0%, rgba(243,39,94,0) 70%);",
+        "gradient-circle-purple":
+          "radial-gradient(circle, rgba(124,69,212,.5) 0%, rgba(243,39,94,0) 70%);",
       },
     },
   },

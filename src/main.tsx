@@ -18,7 +18,7 @@ ReactDOM.createRoot(root!).render(
       </div>
     </section>
     <Team />
-    <RoadMap/>
-    <Footer/>
+    <RoadMap />
+    <Footer />
   </React.StrictMode>
 );

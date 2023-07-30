@@ -1,6 +1,5 @@
 import Logo from "../../assets/Logo";
-import Circle from "../../components/circleGradient";
-import Circle2 from "../../components/circleGradient2";
+import Circle2 from "../../components/circleGradient3";
 
 function Footer() {
   return (
