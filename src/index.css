@@ -3,8 +3,42 @@
 @tailwind utilities;
 
 body {
-    background-color: black;
-    color: white; 
-    font-family: 'Inconsolata', monospace;
-    -webkit-tap-highlight-color: transparent;
+  background-color: black;
+  color: white;
+  font-family: "Inconsolata", monospace;
+  -webkit-tap-highlight-color: transparent; 
 }
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  color: white;
+  background-color: #f3275e;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(50, 50, 50, 0.3);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(243, 39, 94, .5);
+  border-radius: 99px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(243, 39, 94, .8);
+}
+
+.container-center {
+  @apply container mx-auto !max-w-screen-xl;
+}
+

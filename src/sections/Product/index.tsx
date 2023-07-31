@@ -1,13 +1,8 @@
-import Describe from "../../partials/sections/Product/Describe";
-import ItemProducts from "./ItemProducts";
-import DetailPrice from "../../partials/sections/Product/DetailPrice";
-
-function Product() {
+function Product({ children }: { children: any }) {
+ 
   return (
-    <section>
-      <Describe />
-      <ItemProducts />
-      <DetailPrice/>
+    <section id="products">
+      {children}
     </section>
   );
 }

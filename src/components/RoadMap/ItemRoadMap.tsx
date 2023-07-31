@@ -5,8 +5,9 @@ type ItemRoadMap = {
 };
 
 function ItemRoadMap({ img = "", title = "", id }: ItemRoadMap) { 
+  const className = ["md:grid-in-[Products] md:grid-in-[Brand] md:grid-in-[Expansion] md:grid-in-[Community]"]
   return (
-    <div className="aspect-square text-white relative overflow-hidden">
+    <div className={`h-[400px] text-white relative overflow-hidden md:grid-in-[${title}]`}>
       <input
         type="checkbox"
         id={`roadmap-index-${id}`}

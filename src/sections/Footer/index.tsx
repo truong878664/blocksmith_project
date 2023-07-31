@@ -4,7 +4,7 @@ import Circle2 from "../../components/circleGradient3";
 function Footer() {
   return (
     <footer>
-      <div className="relative">
+      <div className="relative lg:px-[5%]">
         <div className="mt-16 mx-4 pb-6">
           <div className="text-4xl font-bold mb-6">
             <span>Work with Blocksmith Labs</span>
@@ -23,15 +23,15 @@ function Footer() {
               <span className="font-bold mr-2">Blocksmith</span>
               <span>Labs</span>
             </div>
-            <ul className="text-lg font-bold flex flex-col gap-2 mt-4">
-              <li>Twitter</li>
-              <li>Discord</li>
-              <li>Instagram</li>
-              <li>Contact</li>
+            <ul className="text-lg font-bold flex flex-col gap-2 mt-4 lg:items-end">
+              <li className="">Twitter</li>
+              <li className="">Discord</li>
+              <li className="">Instagram</li>
+              <li className="">Contact</li>
             </ul>
           </div>
           <hr className="border-stone-500" />
-          <div className="mt-12 text-xs">
+          <div className="mt-12 text-xs lg:text-base">
             <span>2023 Blocksmith Labs. All right reserved.</span>
           </div>
         </div>

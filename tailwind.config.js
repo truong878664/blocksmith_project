@@ -15,7 +15,20 @@ export default {
         "gradient-circle-purple":
           "radial-gradient(circle, rgba(124,69,212,.5) 0%, rgba(243,39,94,0) 70%);",
       },
+      gridTemplateAreas: {
+        'roadmap': [
+          "Products Products Products Brand Brand",
+          "Expansion Expansion Community Community Community",
+          "ourCommunity ourCommunity ourCommunity ourCommunity ourCommunity",
+        ],
+        'price': [
+          "price price price change change",
+          "valuation valuation valuation volume volume",
+        ],
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@savvywombat/tailwindcss-grid-areas')
+  ],
 };
