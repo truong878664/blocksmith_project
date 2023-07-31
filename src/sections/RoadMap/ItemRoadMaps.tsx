@@ -7,7 +7,7 @@ function ItemRoadMaps() {
       {dataRoadMaps.map((item, index) => (
         <ItemRoadMap key={index} img={item.img} title={item.title} id={index} />
       ))}
-      <div className="h-[400px] border border-black px-8 pb-5 relative flex items-end w-full overflow-hidden md:grid-in-[ourCommunity]">
+      <div className="h-100 border border-black px-8 pb-5 relative flex items-end w-full overflow-hidden md:grid-in-[ourCommunity]">
         <img src="src/assets/img/roadMap/Discord.jpg" alt=""  className="absolute top-0 right-0 bottom-0 object-right"/>
         <div className="relative">
           <span className="text-4xl font-bold">Join our Community</span>

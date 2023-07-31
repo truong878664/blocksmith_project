@@ -1,4 +1,4 @@
-import crystalImage from "../../assets/img/Crystal.jpg";
+import crystalImage from "../../assets/img/Crystal.png";
 
 function About() {
   return (

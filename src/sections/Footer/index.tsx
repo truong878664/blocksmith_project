@@ -23,11 +23,19 @@ function Footer() {
               <span className="font-bold mr-2">Blocksmith</span>
               <span>Labs</span>
             </div>
-            <ul className="text-lg font-bold flex flex-col gap-2 mt-4 lg:items-end">
-              <li className="">Twitter</li>
-              <li className="">Discord</li>
-              <li className="">Instagram</li>
-              <li className="">Contact</li>
+            <ul className="text-lg font-bold flex flex-col gap-2 mt-4 md:items-end">
+              <li className="hover:text-c-pink">
+                <a href="#">Twitter</a>
+              </li>
+              <li className="hover:text-c-pink">
+                <a href="#">Discord</a>
+              </li>
+              <li className="hover:text-c-pink">
+                <a href="#">Instagram</a>
+              </li>
+              <li className="hover:text-c-pink">
+                <a href="#">Contact</a>
+              </li>
             </ul>
           </div>
           <hr className="border-stone-500" />
@@ -39,7 +47,6 @@ function Footer() {
           <Circle2 className="" />
         </div>
       </div>
-      {/* <Circle className=""/> */}
     </footer>
   );
 }

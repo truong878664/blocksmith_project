@@ -26,6 +26,9 @@ export default {
           "valuation valuation valuation volume volume",
         ],
       },
+      height: {
+        '100': '25rem',
+      }
     },
   },
   plugins: [
