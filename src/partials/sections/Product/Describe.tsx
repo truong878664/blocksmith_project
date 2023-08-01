@@ -1,6 +1,11 @@
 import React from "react";
+type Props = {
+  children?: React.ReactNode
+}
 
-const Describe = React.forwardRef((props, ref: React.Ref<HTMLDivElement>) => {
+const Describe = React.forwardRef((props:Props, ref: React.Ref<HTMLDivElement>) => {
+  console.log(props);
+  
   return (
     <div className="container-center" id="describe-products" ref={ref}>
       <div className="px-4 py-12 font-bold md:px-8 md:py-20 md:mt-16">

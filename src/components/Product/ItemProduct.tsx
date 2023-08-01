@@ -1,6 +1,7 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { useEffect } from "react";
+import imageProducts from "./imageProduct";
 
 type ItemProduct = {
   img: string;
@@ -9,7 +10,8 @@ type ItemProduct = {
   id: number|string
 };
 
-function ItemProduct({ img, logo, describe, id }: ItemProduct) {
+function ItemProduct({ img, logo, describe, id }: ItemProduct) {  
+  console.log(imageProducts);
   const queryItemProduct = `item-product-gsap-${Number(id) + 1}`
   useEffect(()=> {
     gsap.registerPlugin(ScrollTrigger);

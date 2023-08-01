@@ -13,6 +13,8 @@ type Props = {
 const ContentWelcome = React.forwardRef(
   (props: Props, ref: React.Ref<HTMLDivElement>) => {
     useEffect(() => {
+      console.log(props);
+      
       gsap.registerPlugin(ScrollTrigger);
       gsap.to("#image-heros-stone-2", {
         scrollTrigger: {
@@ -46,7 +48,8 @@ const ContentWelcome = React.forwardRef(
     return (
       <div className="w-full overflow-hidden h-[150vh] flex flex-col">
         <div
-          data-welcome-panner="" ref={ref}
+          data-welcome-panner=""
+          ref={ref}
           className="flex flex-col justify-center mx-auto relative max-w-[1280px] w-full flex-1 mb-10 px-10 group/panner-welcome"
         >
           <div className="font-bold text-4xl text-center mb-10 tracking-tighter mx-4 md:text-5xl lg:text-8xl -translate-y-full opacity-0 transition-all delay-500 duration-700 group-data-[welcome-panner='active']/panner-welcome:translate-y-0 group-data-[welcome-panner='active']/panner-welcome:opacity-100">

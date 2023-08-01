@@ -2,6 +2,9 @@ import ItemRoadMap from "../../components/RoadMap/ItemRoadMap";
 import dataRoadMaps from "../../data/dataRoadMap";
 
 function ItemRoadMaps() {
+  const classNameTailwind = ["md:grid-in-[Products] md:grid-in-[Brand] md:grid-in-[Expansion] md:grid-in-[Community]"]
+  console.log(classNameTailwind);
+  
   return (
     <div className="grid grid-cols-1 gap-4 pt-4 md:grid-cols-none md:grid-areas-roadmap">
       {dataRoadMaps.map((item, index) => (
