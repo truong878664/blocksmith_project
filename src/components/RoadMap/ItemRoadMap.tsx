@@ -5,7 +5,7 @@ type ItemRoadMap = {
 };
 
 function ItemRoadMap({ img = "", title = "", id }: ItemRoadMap) { 
-  const className = ["md:grid-in-[Products] md:grid-in-[Brand] md:grid-in-[Expansion] md:grid-in-[Community]"]
+  const classNameTailwind = ["md:grid-in-[Products] md:grid-in-[Brand] md:grid-in-[Expansion] md:grid-in-[Community]"]
   return (
     <div className={`h-100 text-white relative overflow-hidden md:grid-in-[${title}]`}>
       <input
@@ -13,7 +13,7 @@ function ItemRoadMap({ img = "", title = "", id }: ItemRoadMap) {
         id={`roadmap-index-${id}`}
         className="peer/roadmap"
       />
-      <label
+      <label 
         htmlFor={`roadmap-index-${id}`}
         className="absolute top-0 left-0 right-0 bottom-0 z-10"
       ></label>
@@ -21,7 +21,7 @@ function ItemRoadMap({ img = "", title = "", id }: ItemRoadMap) {
       <div className="roadmap-index absolute top-0 left-0 right-0 bottom-0 bg-black/40 backdrop-blur opacity-0 z-[1] peer-checked/roadmap:opacity-100 transition-all duration-300"></div>
       <div className="z-[1] px-6 py-8 absolute left-0 bottom-0 h-24 transition-all duration-500 peer-checked/roadmap:h-full group">
         <div className="flex items-start mb-4">
-          <span className="mr-4 font-bold text-2xl">{title}</span>
+          <span className="mr-4 font-bold text-2xl md:text-4xl lg:text-5xl">{title}</span>
           <span className="text-xl peer-checked/roadmap:group-[]:rotate-180 transition-all duration-700 delay-200">
             <i className="fa-solid fa-circle-chevron-up"></i>
           </span>

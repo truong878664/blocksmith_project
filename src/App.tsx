@@ -9,10 +9,12 @@ import ItemProducts from "./sections/Product/ItemProducts";
 import DetailPrice from "./partials/sections/Product/DetailPrice";
 import { useEffect, useRef } from "react";
 import intersection from "./intersection";
+import Loading from "./partials/Loading";
+import AboutProductWrapper from "./sections/Wrapper/AboutProductWrapper";
 
 function App() {
   const describeProductsRef = useRef(null);
-  const aboutProductWrapperRef: any = useRef(null);
+  const aboutProductWrapperRef: React.RefObject<HTMLDivElement> = useRef(null);
 
   useEffect(() => {
     intersection({
@@ -27,20 +29,16 @@ function App() {
 
   return (
     <>
+      <Loading />
       <Welcome />
-      <section
-        id="about-product-wrapper"
-        data-mode=""
-        className="bg-white text-black data-[mode='dark']:bg-black data-[mode='dark']:text-white transition-all duration-500"
-        ref={aboutProductWrapperRef}
-      >
+      <AboutProductWrapper ref={aboutProductWrapperRef}>
         <About />
         <Product>
           <Describe ref={describeProductsRef} />
           <ItemProducts />
           <DetailPrice />
         </Product>
-      </section>
+      </AboutProductWrapper>
       <Team />
       <RoadMap />
       <Footer />

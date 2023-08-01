@@ -22,7 +22,7 @@ function DetailPrice() {
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-2 gap-4 mt-4 font-bold text-xl md:text-2xl md:grid-areas-price lg:grid-cols-4">
+        <div className="grid grid-cols-2 gap-4 mt-4 font-bold text-xl md:text-2xl md:grid-areas-price lg:md:grid-areas-none lg:grid-cols-4">
           <div className="border border-black p-4 bg-black text-white md:grid-in-price lg:grid-in-auto">
             <span className="block">$FORGE Price</span>
             <span className="block md:text-4xl xl:text-5xl">$0.09</span>

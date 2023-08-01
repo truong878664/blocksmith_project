@@ -9,8 +9,8 @@ function ItemRoadMaps() {
       ))}
       <div className="h-100 border border-black px-8 pb-5 relative flex items-end w-full overflow-hidden md:grid-in-[ourCommunity]">
         <img src="src/assets/img/roadMap/Discord.jpg" alt=""  className="absolute top-0 right-0 bottom-0 object-right"/>
-        <div className="relative">
-          <span className="text-4xl font-bold">Join our Community</span>
+        <div className="relative md:flex md:justify-between w-full md:items-end lg:flex-col lg:items-start lg:h-full ">
+          <span className="text-4xl font-bold md:text-6xl lg:text-8xl lg:w-1/2">Join our Community</span>
           <div className="mt-2">
             <button className="bg-black text-white px-6 py-4 rounded-full border-2 border-black hover:bg-white hover:text-black ">
               <span className="text-xl font-bold mr-4">Discord</span>
