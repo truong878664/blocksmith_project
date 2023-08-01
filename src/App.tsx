@@ -11,9 +11,12 @@ import { useEffect, useRef } from "react";
 import intersection from "./intersection";
 import Loading from "./partials/Loading";
 import AboutProductWrapper from "./sections/Wrapper/AboutProductWrapper";
+import Header from "./partials/Header";
+import ContentWelcome from "./partials/sections/Welcome";
 
 function App() {
   const describeProductsRef = useRef(null);
+  const welcomePannerRef = useRef(null)
   const aboutProductWrapperRef: React.RefObject<HTMLDivElement> = useRef(null);
 
   useEffect(() => {
@@ -26,11 +29,14 @@ function App() {
       },
     });
   });
-
+  
   return (
     <>
-      <Loading />
-      <Welcome />
+      <Loading welcomePannerRef={welcomePannerRef}/>
+      <Welcome>
+        <Header />
+        <ContentWelcome ref={welcomePannerRef} />
+      </Welcome>
       <AboutProductWrapper ref={aboutProductWrapperRef}>
         <About />
         <Product>

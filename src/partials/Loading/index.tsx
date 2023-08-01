@@ -1,8 +1,11 @@
 import { useEffect, useRef } from "react";
 import HeaderLoading from "./HeaderLoading";
 import gsap from "gsap";
+type Props = {
+  welcomePannerRef: React.RefObject<HTMLElement>
+}
 
-function Loading() {
+function Loading({ welcomePannerRef}: Props) {
   const PercentLoadingRef: React.RefObject<HTMLSpanElement> = useRef(null);
   const groupLoadingRef: React.RefObject<HTMLDivElement> = useRef(null);
   const wrapperLoadingRef: React.RefObject<HTMLDivElement> = useRef(null);
@@ -10,14 +13,12 @@ function Loading() {
   const counterLoading = {
     value: 0,
   };
-  
-  if(localStorage.getItem("isVisiter") !== null) {
-      counterLoading.value = 75;
-      durationLoading = 2;
+
+  if (localStorage.getItem("isVisiter") !== null) {
+    counterLoading.value = 75;
+    durationLoading = 2;
   }
   localStorage.setItem("isVisiter", "true");
-  console.log(123);
-  
   useEffect(() => {
     enum TimeEndLoading {
       hide = 1000,
@@ -30,6 +31,7 @@ function Loading() {
     const endLoading = () => {
       setTimeout(() => {
         groupLoadingRef.current!.dataset.status = "hidden";
+        welcomePannerRef.current!.dataset.welcomePanner = "active";
       }, TimeEndLoading.hide);
       setTimeout(() => {
         wrapperLoadingRef.current!.remove();
@@ -38,11 +40,13 @@ function Loading() {
     gsap.to(counterLoading, {
       duration: durationLoading,
       value: 100,
+      ease: "none",
       onUpdate: updatePercentLoading,
     });
     gsap.to("#bar-loading", {
       duration: durationLoading,
       width: "100%",
+      ease: "none",
       onComplete: endLoading,
     });
   });
@@ -74,8 +78,7 @@ function Loading() {
             ref={PercentLoadingRef}
             className="text-[200px] md:text-[250px] lg:text-[300px] leading-none font-bold"
             id="percent-loading"
-          >
-          </span>
+          ></span>
         </div>
       </div>
       <div

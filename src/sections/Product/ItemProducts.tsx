@@ -4,7 +4,7 @@ function ItemProducts() {
   return (
     <div className="">
       {dataProducts.map((item, index) => (
-        <ItemProduct key={index} img={item.img} logo={item.logo} describe={item.describe} />
+        <ItemProduct key={index} img={item.img} logo={item.logo} describe={item.describe} id={index} />
       ))}
     </div>
   );

@@ -1,13 +1,33 @@
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/all";
+import { useEffect } from "react";
+
 type ItemProduct = {
   img: string;
   logo: string;
   describe: string;
+  id: number|string
 };
 
-function ItemProduct({ img, logo, describe }: ItemProduct) {
+function ItemProduct({ img, logo, describe, id }: ItemProduct) {
+  const queryItemProduct = `item-product-gsap-${Number(id) + 1}`
+  useEffect(()=> {
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.to(`.${queryItemProduct}`, {
+      scrollTrigger: {
+        trigger: `.${queryItemProduct}`,
+        start: "top center",
+        end: "center center",
+        scrub: 1,
+      },
+      duration: 3,
+      opacity: 1
+    });
+  })
+
   return (
-    <div className="min-h-screen py-16 bg-black text-white px-4 border-y border-stone-500 sticky top-[-1px] grid place-content-center">
-      <div className="flex flex-col justify-center items-center gap-6 container-center md:flex-row md:px-8">
+    <div className={`min-h-screen py-16 bg-black text-white px-4 border-y border-stone-500 sticky top-[-1px] grid place-content-center`}>
+      <div className={`flex flex-col justify-center items-center gap-6 container-center md:flex-row md:px-8 opacity-0 ${queryItemProduct}`}>
         <div className="relative h-full md:w-[55%]">
           <img
             src={img}

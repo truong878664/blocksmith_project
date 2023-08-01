@@ -1,16 +1,12 @@
-// function AboutProductWrapper(props:any, ref:any) {
-
 import React from "react";
+type Props  = {
+  children: React.ReactNode
+}
 
 const AboutProductWrapper = React.forwardRef(
-  (props: any, ref: React.Ref<HTMLDivElement>) => {
+  (props: Props, ref: React.Ref<HTMLDivElement>) => {
     return (
-      <section
-        id="about-product-wrapper"
-        data-mode=""
-        className="bg-white text-black data-[mode='dark']:bg-black data-[mode='dark']:text-white transition-all duration-500"
-        ref={ref}
-      >
+      <section id="about-product-wrapper" data-mode="" className="bg-white text-black data-[mode='dark']:bg-black data-[mode='dark']:text-white transition-all duration-500" ref={ref} >
         {props.children}
       </section>
     );
