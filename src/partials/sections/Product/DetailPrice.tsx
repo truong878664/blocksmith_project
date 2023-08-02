@@ -1,15 +1,17 @@
+import Coins from "../../../assets/img/product/Coins.jpg"
+
 function DetailPrice() {
   return (
     <div className="bg-white text-black px-4 py-16 md:px-8">
       <div className="container-center">
-        <div className="bg-black text-white relative p-6 font-bold overflow-clip">
+        <div className="bg-black text-white relative p-6 font-bold overflow-hidden">
           <div className="text-5xl relative z-[1] tracking-tighter md:text-6xl">
             <span className="w-1/2 block">Ouruniverse runs on $FORGE</span>
           </div>
           <div className="py-20 md:py-28" />
           <div className="absolute -right-10 top-[25%] w-3/4 md:w-8/12">
             <img
-              src="src/assets/img/product/Coins.jpg"
+              src={Coins}
               alt=""
               className="object-contain"
             />

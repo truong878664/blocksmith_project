@@ -3,7 +3,7 @@ import Circle from "../../../components/circleGradient3";
 import herostone from "../../../assets/img/herostone.png";
 import herostone2 from "../../../assets/img/herostone2.png";
 import herostone3 from "../../../assets/img/herostone3.png";
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
 
@@ -11,10 +11,10 @@ type Props = {
   children?: React.ReactNode;
 };
 const ContentWelcome = React.forwardRef(
-  (props: Props, ref: React.Ref<HTMLDivElement>) => {
+  (_props: Props, ref: React.Ref<HTMLDivElement>) => {
+    const videoRef = useRef<HTMLVideoElement>(null);
+
     useEffect(() => {
-      console.log(props);
-      
       gsap.registerPlugin(ScrollTrigger);
       gsap.to("#image-heros-stone-2", {
         scrollTrigger: {
@@ -43,7 +43,13 @@ const ContentWelcome = React.forwardRef(
         },
         y: -100,
       });
+
     });
+    //play video
+    useEffect(() => {
+      console.log("played video");
+      videoRef.current!.play();
+    }, []);
 
     return (
       <div className="w-full overflow-hidden h-[150vh] flex flex-col">
@@ -57,32 +63,34 @@ const ContentWelcome = React.forwardRef(
           </div>
           <div className="mt-10 translate-y-full opacity-0 transition-all delay-500 duration-1000 group-data-[welcome-panner='active']/panner-welcome:translate-y-0 group-data-[welcome-panner='active']/panner-welcome:opacity-100">
             <video
+              ref={videoRef}
               className="mx-auto w-full max-w-[448px]"
               src={video}
-              autoPlay
+              autoPlay={true}
+              loop={true}
               muted
-              loop
+              playsInline
             />
           </div>
 
-          <div className="">
+          <div className="group">
             <img
               id="image-heros-stone-3"
-              className="absolute right-0 translate-x-[40%] top-1/2"
+              className="absolute -right-1/2 md:right-0 translate-x-[40%] top-1/2 opacity-0 transition-opacity delay-1000 duration-1000 group-data-[welcome-panner='active']/panner-welcome:group-[]:opacity-100 md:block"
               src={herostone3}
               alt=""
             />
 
             <img
               id="image-heros-stone-2"
-              className="absolute left-0 -translate-x-[40%] top-2/3"
+              className="absolute left-0 w-40 md:w-auto -translate-x-[40%] top-2/3 opacity-0 transition-opacity delay-1000 duration-1000 group-data-[welcome-panner='active']/panner-welcome:group-[]:opacity-100"
               src={herostone2}
               alt=""
             />
 
             <img
               id="image-heros-stone-1"
-              className="absolute right-0 -bottom-20 translate-x-[10%] md:-bottom-[40%]"
+              className="absolute right-0 hidden -bottom-20 translate-x-[10%] md:-bottom-[40%] lg:block"
               src={herostone}
               alt=""
             />

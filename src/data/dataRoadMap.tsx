@@ -5,19 +5,19 @@ type DataRoadMap = {
 
 const dataRoadMaps: DataRoadMap = [
   {
-    img: "src/assets/img/roadMap/Image-roadmap1.jpg",
+    img: "ImageRoadmap1",
     title: "Products",
   },
   {
-    img: "src/assets/img/roadMap/Brand.jpg",
+    img: "Brand",
     title: "Brand",
   },
   {
-    img: "src/assets/img/roadMap/Expansion.jpg",
+    img: "Expansion",
     title: "Expansion",
   },
   {
-    img: "src/assets/img/roadMap/Community.jpg",
+    img: "Community",
     title: "Community",
   },
 ];

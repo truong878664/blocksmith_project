@@ -1,3 +1,5 @@
+import imageTeams from "./imageTeams";
+
 type Person = {
   img: string;
   name: string;
@@ -13,7 +15,7 @@ attract new customers by developing and implementing strategies,
 building relationships, and finding promotional opportunities.`;
 
 function Person({
-  img = "src/assets/img/team/Cryptonent.jpg",
+  img = "Cryptonent",
   name = "Harmy",
   title = "CEO",
   describe = defaultDescribe,
@@ -36,7 +38,7 @@ function Person({
         View Details
       </div>
       <div className="w-full">
-        <img src={img} alt="" className="w-full object-cover" />
+        <img src={imageTeams[img]} alt="" className="w-full object-cover" />
       </div>
       <div className="w-full h-1/5 text-white bg-stone-800/40 backdrop-blur-lg absolute bottom-0 p-5 left-0 z-10 duration-500 transition-all flex flex-col justify-between peer-checked/person:h-full group">
         <div className="flex justify-between mb-10">

@@ -43,7 +43,7 @@ function Footer() {
             <span>2023 Blocksmith Labs. All right reserved.</span>
           </div>
         </div>
-        <div className="absolute bottom-0 right-0 h-full w-full z-[-1] overflow-clip">
+        <div className="absolute bottom-0 right-0 h-full w-full z-[-1] overflow-hidden">
           <Circle2 className="" />
         </div>
       </div>

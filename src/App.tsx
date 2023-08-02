@@ -16,7 +16,7 @@ import ContentWelcome from "./partials/sections/Welcome";
 
 function App() {
   const describeProductsRef = useRef(null);
-  const welcomePannerRef = useRef(null)
+  const welcomePannerRef = useRef<HTMLDivElement>(null)
   const aboutProductWrapperRef: React.RefObject<HTMLDivElement> = useRef(null);
 
   useEffect(() => {

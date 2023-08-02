@@ -1,12 +1,15 @@
+import imageRoadMaps from "./imageRoadMaps";
+
 type ItemRoadMap = {
   img: string;
   title: string;
   id: number | string;
+  classNameArea: string;
 };
 
-function ItemRoadMap({ img = "", title = "", id }: ItemRoadMap) { 
+function ItemRoadMap({ img = "", title = "", id, classNameArea }: ItemRoadMap) { 
   return (
-    <div className={`h-100 text-white relative overflow-hidden md:grid-in-[${title}]`}>
+    <div className={`h-100 text-white relative overflow-hidden ${classNameArea}`}>
       <input
         type="checkbox"
         id={`roadmap-index-${id}`}
@@ -39,7 +42,7 @@ function ItemRoadMap({ img = "", title = "", id }: ItemRoadMap) {
       <div className="absolute top-0 left-0 right-0 bottom-0">
         <img
           className="w-full h-full object-cover object-right-top"
-          src={img}
+          src={imageRoadMaps[img]}
           alt=""
         />
       </div>

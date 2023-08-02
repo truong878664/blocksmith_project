@@ -8,7 +8,7 @@ type dataTeam = {
 
 const dataTeams: dataTeam = [
   {
-    img: "src/assets/img/team/Cryptonent.jpg",
+    img: "Cryptonent",
     name: "QUOC TRUONG",
     title: "Co-CEO",
     describe:
@@ -16,7 +16,7 @@ const dataTeams: dataTeam = [
     id: "",
   },
   {
-    img: "src/assets/img/team/Harmy.jpg",
+    img: "Harmy",
     name: "Harmy",
     title: "Co-CEO",
     describe:
@@ -24,7 +24,7 @@ const dataTeams: dataTeam = [
     id: "",
   },
   {
-    img: "src/assets/img/team/Gee2Kay.png",
+    img: "Gee2Kay",
     name: "Gee2Kay",
     title: "COO",
     describe:
@@ -32,7 +32,7 @@ const dataTeams: dataTeam = [
     id: "",
   },
   {
-    img: "src/assets/img/team/Wozgun.jpg",
+    img: "Wozgun",
     name: "Wozgun",
     title: "CTO",
     describe:
